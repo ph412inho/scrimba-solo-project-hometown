@@ -1,0 +1,227 @@
+/**
+Palette: https://scrimba.com/links/hometown-palette
+Black #181D27
+Grey #535862
+White #FDFDFD
+Purple #7F56D9
+blue #90B1DF
+*/
+
+body {
+    margin: 0px 0px 96px 0px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.hero-section {
+    background-image: url("/images/hero-image.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 382px;
+    padding-top: 48px;
+    color: #FDFDFD;
+    display: flex-inline;
+    gap: 1.5rem;
+}
+
+#special-header {
+    justify-content: center;
+    font-family: "Caveat", cursive;
+    font-size: 96px;
+    color: #7F56D9;
+    background-color: #FDFDFD;
+    padding: 12px 24px;
+    border-radius: 18px;
+    margin-bottom: 36px;
+}
+
+.hero-section h2 {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: block;
+    width: fit-content;
+    margin: 48px auto 0;
+    background: linear-gradient(90deg, oklch(75% 0.08 250 / 0.8), oklch(60% 0.19 290 / 0.8));
+    padding: 12px 24px;
+    border-radius: 18px;
+}
+
+.hero-section h2:hover {
+    background: linear-gradient(90deg, oklch(75% 0.08 250 / 1), oklch(60% 0.19 290 / 1));
+}
+
+#special-rayong {
+    color: #7F56D9;
+    text-decoration: underline;
+}
+
+.content-section h3 {
+    font-family: "Caveat", cursive;
+    font-size: 48px;
+    margin: 36px auto;
+    color: #181D27;
+}
+
+.content-section {
+    padding: 0px 48px;
+}
+
+.main-col {
+    display: flex;
+    justify-content: space-evenly;
+    color: #181D27;
+    flex-wrap: wrap;  /* Added: allows items to wrap */
+    gap: 24px;  /* Added: spacing between wrapped items */
+}
+
+.travel-place-col {
+    max-width: 300px;
+    flex: 1 1 250px;  /* Added: flexible sizing */
+}
+
+.travel-place-col h4 {
+    font-size: 20px;
+}
+
+.travel-place-col p {
+    text-align: left;
+}
+
+.guide-section {
+    margin: 24px 48px;
+    text-align: left;
+    border-top: 1px solid #535862;
+    font-family: "Roboto", sans-serif;
+}
+
+.guide-section h3 {
+    font-family: "Caveat", cursive;
+    font-size: 48px;
+}
+
+.guide-section p {
+    margin-top: 0px;
+    font-size: 20px;
+    max-width: 428px;
+    margin-right: 48px;
+}
+
+#bio {
+    display: flex;
+    flex-wrap: wrap;  /* Added: allows wrapping on small screens */
+    gap: 24px;  /* Added: spacing */
+    align-items: flex-start;  /* Added: alignment */
+    margin-bottom: 24px;
+}
+
+img {
+    width: 300px;
+    max-width: 100%;  /* Added: prevents overflow */
+    height: auto;  /* Added: maintains aspect ratio */
+}
+
+button {
+    font-family: "Roboto", sans-serif;
+    padding: 16px 24px;
+    border-radius: 16px;
+    color: #FDFDFD;
+    border: none;
+    font-size: 20px;
+    background: linear-gradient(270deg, oklch(75% 0.08 250 / 1), oklch(60% 0.19 290 / 1));
+}
+
+button:hover {
+    box-shadow: 5px 5px 10px #535862;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+/* Tablet and smaller (below 768px) */
+@media (max-width: 768px) {
+    #special-header {
+        font-size: 64px;  /* Smaller heading */
+        padding: 8px 16px;
+    }
+    
+    .content-section {
+        padding: 0px 24px;  /* Less padding */
+    }
+    
+    .content-section h3,
+    .guide-section h3 {
+        font-size: 36px;  /* Smaller section headings */
+    }
+    
+    .main-col {
+        flex-direction: column;  /* Stack vertically */
+        align-items: center;
+    }
+    
+    .travel-place-col {
+        max-width: 100%;  /* Full width */
+    }
+    
+    .guide-section {
+        margin: 24px 24px;
+    }
+    
+    .guide-section p {
+        max-width: 100%;
+        margin-right: 0;
+    }
+    
+    #bio {
+        flex-direction: column;  /* Stack vertically */
+        align-items: center;
+    }
+}
+
+/* Mobile (below 480px) */
+@media (max-width: 480px) {
+    #special-header {
+        font-size: 48px;  /* Even smaller */
+        padding: 6px 12px;
+    }
+    
+    .hero-section {
+        min-height: 250px;
+        padding-top: 24px;
+    }
+    
+    .hero-section h2 {
+        font-size: 14px;  /* Smaller badge text */
+        padding: 8px 16px;
+    }
+    
+    .content-section {
+        padding: 0px 16px;  /* Minimal padding */
+    }
+    
+    .content-section h3,
+    .guide-section h3 {
+        font-size: 32px;
+    }
+    
+    .travel-place-col h4 {
+        font-size: 24px;
+    }
+    
+    .guide-section {
+        margin: 24px 16px;
+    }
+    
+    .guide-section p {
+        font-size: 18px;
+    }
+    
+    button {
+        padding: 12px 20px;
+        font-size: 18px;
+        width: 100%;  /* Full width on mobile */
+    }
+    
+    img {
+        width: 100%;  /* Full width images on mobile */
+    }
+}
